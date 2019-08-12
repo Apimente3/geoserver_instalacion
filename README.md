@@ -130,7 +130,7 @@ Este proyecto está licenciado bajo la licencia MIT; consulte el archivo [LICENS
 [4]: https://docs.geoserver.org/
 [5]: http://tomcat.apache.org/
 [6]: https://semver.org/lang/es/
-[7]: https://github.com/grupoioa/respaldo_automatizado/tags
+[7]: https://github.com/grupoioa/geoserver_instalacion/tags
 [8]: https://github.com/rmedina09
 [9]: https://github.com/olmozavala
 
