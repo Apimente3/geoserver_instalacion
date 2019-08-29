@@ -63,21 +63,6 @@ Para obtener el archivo `.war`, ingresaremos a la siguiente dirección :
 
 ### Configuración del GEOSERVER  
 
-#### Interfaz Web 
-Con el GEOSERVER ya instalado sobre tomcat, por medio de un explorador web ingresamos la url `http://localhost:8080/geoserver/web` :  
-   
-   * Nos autenticamos por default con ***username*** : **admin** y **password** : **geoserver**  
-   * Por seguridad creamos un nuevo usuario  en  
-     *Security* -> *Users,Groups, and Roles* -> *Add new user* y asignamos los roles de ADMIN y GROUP_ADMIN.
-   * Borramos las group-layers, layers, stores, styles y workspaces que vienen por default en el Geoserver en este orden.
-   * Habilitamos el *GeoWebCache* :  
-     *Tile Caching* -> *Caching Defaults* -> *Provided Services*  
-     Y marcamos las casillas de *Enable direct integration with GeoServer WMS*, *Enable WMS-C Service* y *Enable TMS Service*
-   * Cambiamos las opciones del **log** a **PRODUCTION**  
-     En *Settings* -> *Global* -> *Internal Settings* -> *Logging Settings* y seleccionamos **PRODUCTION_LOGGING.properties**
-   * Cambiamos el numero máximo de "features" devueltas por WFS a 1000
-     *Services* -> *WFS* -> *Features* -> *Maximum number of features*
-
 #### Web.xml
 Editamos el archivo web.xml para agregar las configuraciones que listamos en seguida:
    * Cambiar el directorio 'data' que es en donde se almacena la información, lo hacemos por medio de la variable 
@@ -95,6 +80,22 @@ Editamos el archivo web.xml para agregar las configuraciones que listamos en seg
        <param-value>true</param-value>
      </context-param>
      ```
+
+#### Por medio de la interfaz Web 
+Con el GEOSERVER ya instalado sobre tomcat, por medio de un explorador web ingresamos la url `http://localhost:8080/geoserver/web` :  
+   
+   * Nos autenticamos por default con ***username*** : **admin** y **password** : **geoserver**  
+   * Por seguridad creamos un nuevo usuario  en  
+     *Security* -> *Users,Groups, and Roles* -> *Add new user* y asignamos los roles de ADMIN y GROUP_ADMIN.
+   * Borramos las group-layers, layers, stores, styles y workspaces que vienen por default en el Geoserver en este orden.
+   * Habilitamos el *GeoWebCache* :  
+     *Tile Caching* -> *Caching Defaults* -> *Provided Services*  
+     Y marcamos las casillas de *Enable direct integration with GeoServer WMS*, *Enable WMS-C Service* y *Enable TMS Service*
+   * Cambiamos las opciones del **log** a **PRODUCTION**  
+     En *Settings* -> *Global* -> *Internal Settings* -> *Logging Settings* y seleccionamos **PRODUCTION_LOGGING.properties**
+   * Cambiamos el numero máximo de "features" devueltas por WFS a 1000
+     *Services* -> *WFS* -> *Features* -> *Maximum number of features*
+
  ### Optimizaciones
  
    * Seleccionamos el conjunto de caracteres **ISO-8859-1** para acentos :  
