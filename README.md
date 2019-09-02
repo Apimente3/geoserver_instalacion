@@ -15,38 +15,21 @@ Para obtener el archivo `.war`, ingresaremos a la siguiente dirección :
 
 #### Instalación nativa de JAI y JAI Image I/O
    **JAI**
-   * Descargamos JAI 1.1.3 para linux [jai-1.1.3-lib-linux-amd-4-jdk.bin][1]
+   * Descargamos [JAI 1.1.3][1] para linux amd64
    * Hacemos los sigueinte pasos :
      ```
      export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_101  
-     sudo cp jai-1_1_3-lib-linux-amd64-jdk.bin $JAVA_HOME  
-     cd $JAVA_HOME  
-     sudo chmod u+x jai-1_1_3-lib-linux-amd64-jdk.bin  
-     sudo ./jai-1_1_3-lib-linux-amd64-jdk.bin  
-     sudo rm jai-1_1_3-lib-linux-amd64-jdk.bin  
+     sudo cp ROOT/jai-1_1_3/lib/*.jar $JAVA_HOME/jre/lib/ext/
+     sudo cp ROOT/jai-1_1_3/lib/*.so $JAVA_HOME/jre/lib/amd64/     
      ```
      
    **JAI-IMAGEIO**
-   * Descargamos JAI-IMAGEIO para linux [jai_imageio-1_1-lib-linux-amd64-jdk.bin][2]
+   * Descargamos [JAI-IMAGEIO][2] para linux amd64
    * Hacemos los siguientes pasos :  
      ```
-     export _POSIX2_VERSION=199209  
-     sudo cp jai_imageio-1_1-lib-linux-amd64-jdk.bin $JAVA_HOME  
-     cd $JAVA_HOME  
-     sudo chmod u+x jai_imageio-1_1-lib-linux-amd64-jdk.bin  
-     sudo ./jai_imageio-1_1-lib-linux-amd64-jdk.bin  
+     sudo cp ROOT/jai_imageio-1_1/lib/*.jar $JAVA_HOME/jre/lib/ext/  
+     sudo cp ROOT/jai-imageio-1_1/lib/*.so $JAVA_HOME/jre/lib/amd64/     
      ```
-   * En caso de que ocurra el siguiente error  `cannot open 215 for reading No such file or directory`  
-     Se puede hacer lo siguiente 
-     ```
-     sudo cp jai_imageio-1_1-lib-linux-amd64-jdk.bin jai_imageio-1_1-lib-linux-amd64-jdk.bin.old  
-     sudo chmod 777 jai_imageio-1_1-lib-linux-amd64-jdk.bin  
-     sed s/+215/-n+215/ jai_imageio-1_1-lib-linux-amd64-jdk.bin.old > jai_imageio-1_1-lib-linux-amd64-jdk.bin  
-     sudo ./jai_imageio-1_1-lib-linux-amd64-jdk.bin  
-     sudo rm jai_imageio-1_1-lib-linux-amd64-jdk.bin  
-     sudo rm jai_imageio-1_1-lib-linux-amd64-jdk.bin.old  
-     ```
-   
    
    Al final reiniciamos el servidor Tomcat
    ```
