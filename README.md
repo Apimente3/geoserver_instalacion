@@ -26,8 +26,8 @@ Para obtener el archivo `.war`, ingresaremos a la siguiente dirección :
      sudo rm jai-1_1_3-lib-linux-amd64-jdk.bin  
      ```
      
-   **JAI-IMAGE/IO**
-   * Descargamos JAI-IMAGE/IO para linux [jai_imageio-1_1-lib-linux-amd64-jdk.bin][2]
+   **JAI-IMAGEIO**
+   * Descargamos JAI-IMAGEIO para linux [jai_imageio-1_1-lib-linux-amd64-jdk.bin][2]
    * Hacemos los siguientes pasos :  
      ```
      export _POSIX2_VERSION=199209  
